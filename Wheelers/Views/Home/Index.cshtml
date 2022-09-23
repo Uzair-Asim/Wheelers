@@ -1,0 +1,608 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <style>
+        ::selection {
+            color: #FB9C2D;
+            background: #554739;
+        }
+    </style>
+    <link rel="stylesheet" href="~/Content/WheelersCss/style.css">
+    <link rel="shortcut icon" type="~/Image/png" href="~/Image/favicon.png" />
+    <title>Wheelers</title>
+</head>
+<body>
+
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo"> <span>Whe</span>elers</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#vehicles">vehicles</a>
+            <a href="#services">services</a>
+            <a href="#featured">featured</a>
+            <a href="#reviews">reviews</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div id="login-btn">
+            <button class="btn">login</button>
+            <i class="far fa-user"></i>
+        </div>
+
+        <div id="register-btn">
+            <button class="btn">register</button>
+            <i class="far fa-user"></i>
+        </div>
+    </header>
+
+    <div class="login-form-container">
+
+        <span id="close-login-form" class="fas fa-times"></span>
+
+        <form>
+            <h3>user login</h3>
+            <input type="email" id="loginEmail" placeholder="email" class="box">
+            <input type="password" id="loginPass" placeholder="password" class="box">
+            @*<p> forget your password <a href="#">click here</a> </p>*@
+            <input type="button" id="login" value="login" class="btn" onclick="loginUser()">
+            <p> don't have an account <a href="#" id="createAccount">create one</a> </p>
+        </form>
+
+    </div>
+
+    <div class="register-form-container" id="register-form">
+
+        <span id="close-register-form" class="fas fa-times"></span>
+
+        <form>
+            <h3>user register</h3>
+            <input type="email" id="regEmail" placeholder="email" class="box">
+            <input type="password" id="regPass" placeholder="password" class="box">
+            <input type="password" id="regConfirmPass" placeholder="confirm password" class="box">
+            <input type="text" id="regPhoneNumber" placeholder="phone(3381234567)" class="box">
+            <input type="button" id="create" value="register" class="btn" onclick="registerUser()">
+        </form>
+
+    </div>
+    <div class="otp-form-container" id="otp-form">
+
+        <span id="close-otp-form" class="fas fa-times"></span>
+
+        <form>
+            <h3>Enter your OTP</h3>
+            <input type="text" id="otp" placeholder="otp code" class="box">
+            <input type="button" id="create" value="Verify" class="btn" onclick="VerifyOTP()">
+        </form>
+
+    </div>
+
+    <section class="home" id="home">
+
+        <h3 data-speed="-2" class="home-parallax">get your ride</h3>
+
+        <img data-speed="5" class="home-parallax" src="~/Image/home1.png" alt="">
+
+        <a data-speed="7" href="#" class="btn home-parallax">explore cars</a>
+
+    </section>
+
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-home"></i>
+            <div class="content">
+                <h3>50+</h3>
+                <p>branches</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>500+</h3>
+                <p>cars sold</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-users"></i>
+            <div class="content">
+                <h3>400+</h3>
+                <p>happy clients</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>15+</h3>
+                <p>new cars</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="vehicles" id="vehicles">
+
+        <h1 class="heading"> popular <span>vehicles</span> </h1>
+
+        <div class="swiper vehicles-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Kia-forte-gt.jpg" alt="">
+                    <div class="content">
+                        <h3>KIA Forte GT</h3>
+                        <div class="price"> <span>price : </span>  Rs. 62,00,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2022
+                            <span class="fas fa-circle"></span> Automatic
+                            <span class="fas fa-circle"></span> Petrol
+                            <span class="fas fa-circle"></span> 140mph
+                        </p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Toyota.jpg" alt="">
+                    <div class="content">
+                        <h3>Toyota Avalon</h3>
+                        <div class="price"> <span>price : </span> Rs. 47,20,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> Automatic
+                            <span class="fas fa-circle"></span> Petrol
+                            <span class="fas fa-circle"></span> 150mph
+                        </p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Toyota1.jpg" alt="">
+                    <div class="content">
+                        <h3>Toyota Corolla ALTIS</h3>
+                        <div class="price"> <span>price : </span> Rs.37,00,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> Automatic
+                            <span class="fas fa-circle"></span> Petrol
+                            <span class="fas fa-circle"></span> 153mph
+                        </p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Honda-city2.png" alt="">
+                    <div class="content">
+                        <h3>Honda City Aspire</h3>
+                        <div class="price"> <span>price : </span> Rs.32,62,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Alsvin.jpg" alt="">
+                    <div class="content">
+                        <h3>Changan ALSVIN</h3>
+                        <div class="price"> <span>price : </span> Rs.33,00,000/- </div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span> 2021
+                            <span class="fas fa-circle"></span> automatic
+                            <span class="fas fa-circle"></span> petrol
+                            <span class="fas fa-circle"></span> 183mph
+                        </p>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-car"></i>
+                <h3>car selling</h3>
+                <p>Now get your dream vehicle on the go with us to buy cars in Pakistan. Secure, instant and online payments. We arrange all the paperwork. Just Buy.</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+
+            <div class="box">
+                <i class="fas fa-car-crash"></i>
+                <h3>car insurance</h3>
+                <p>Everything comes with a risk, that's why we are here for you. We value every vehicle to meet the highest quality service.</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>We offer dependable, on-demand support options including 24/7 technical and remote support.</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading"> <span>featured</span> cars </h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/CIAZ.jpg" alt="">
+                    <div class="content">
+                        <h3>Suzuki CIAZ</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">Rs. 23,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/AQUA.jpg" alt="">
+                    <div class="content">
+                        <h3>Suzuki AQUA</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">Rs. 15,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/SWIFT.jpg" alt="">
+                    <div class="content">
+                        <h3>Suzuki SWIFT</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">Rs. 16,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/CITY.jpg" alt="">
+                    <div class="content">
+                        <h3>Honda City Aspire 1.5</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">Rs. 33,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/CULTUS.PNG" alt="">
+                    <div class="content">
+                        <h3>Suzuki Cultus</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">Rs. 23,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/SPORTAGE.jpg" alt="">
+                    <div class="content">
+                        <h3>KIA Sportage</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price"> Rs. 43,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/CIVIC.png" alt="">
+                    <div class="content">
+                        <h3>Honda CIVC</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">Rs. 45,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/Featured/ALSIVIN.jpg" alt="">
+                    <div class="content">
+                        <h3>Changan Alsvin</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="price">Rs. 33,00,000/-</div>
+                        <a href="#" class="btn">check out</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+
+    <section class="reviews" id="reviews">
+
+        <h1 class="heading"> client's <span>review</span> </h1>
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/pic-1.png" alt="">
+                    <div class="content">
+                        <p>Review 1</p>
+                        <h3>reviewer name </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/pic-2.png" alt="">
+                    <div class="content">
+                        <p>Review 2</p>
+                        <h3>reviewer name </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/pic-3.png" alt="">
+                    <div class="content">
+                        <p>Review 3</p>
+                        <h3>reviewer name </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/pic-4.png" alt="">
+                    <div class="content">
+                        <p>Review 4</p>
+                        <h3>reviewer name </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/pic-5.png" alt="">
+                    <div class="content">
+                        <p>Review 5</p>
+                        <h3>reviewer name </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="~/Image/pic-6.png" alt="">
+                    <div class="content">
+                        <p>Review 6</p>
+                        <h3>reviewer name </h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span> us</h1>
+
+        <div class="row">
+
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.916316878784!2d73.02156311451502!3d33.65933014578189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95906a03cfff%3A0x2b2f1c1c99b676ce!2sInternational%20Islamic%20University%20Islamabad%20(IIUI)!5e0!3m2!1sen!2s!4v1652787717029!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+
+
+            <form action="">
+                <h3>get in touch</h3>
+                <input type="text" placeholder="your name" class="box">
+                <input type="email" placeholder="your email" class="box">
+                <input type="tel" placeholder="subject" class="box">
+                <textarea placeholder="your message" class="box" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our branches</h3>
+
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Islamabad </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Lahore </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Karachi </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Peshawar </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Faisalabad </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> And all over Pakistan </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> vehicles </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> services </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> featured </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> reviews </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +92-336-5082595 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +92-340-0603481 </a>
+                <a href="#" style="text-transform: lowercase;"> <i class="fas fa-phone"></i> contact@wheelers.com </a>
+                <a href="#"> <i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan- 44000 </a>
+            </div>
+
+
+        </div>
+
+        <div class="credit"> created by Uzair Asim &amp Zain-ul-Abideen </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="~/Scripts/WheelersJs/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
